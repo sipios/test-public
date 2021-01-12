@@ -1,12 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Template
 metadata:
-  name: forge-template
-  title: Forge Template
-  description: Create a new Forge project
+  name: forge-react-template
+  title: React.js App (Forge)
+  description: Create a new React.js application using Theodo's Forge
   tags:
     - experimental
     - forge
+    - react.js
+    - frontend
 spec:
   owner: woodyr@sipios.com
   templater: forge
@@ -22,7 +24,7 @@ spec:
         title: Name
         type: string
         pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
-        description: Unique name of the component. Lowercase, URL-safe characters only.
+        description: Unique name of the website to create. Lowercase, URL-safe characters only.
       description:
         title: Description
         type: string
