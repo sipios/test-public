@@ -19,7 +19,6 @@ spec:
     required: 
       - component_id
       - description
-      - front_end_technology
       - back_end_technology
       - provide_devops_scripts
     properties:
