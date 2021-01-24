@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: forge-django-template
+  title: Django App (Forge)
+  description: Create a new Django application using Theodo's Forge
+  tags:
+    - experimental
+    - forge
+    - django
+    - backend
+spec:
+  owner: user:wrousseau
+  templater: forge
+  type: website
+  path: '.'
+  
+  schema:
+    required: 
+      - component_id
+      - description
+      - technology
+    properties:
+      component_id:
+        title: Name
+        type: string
+        pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
+        description: Unique name of the website to create. Lowercase, URL-safe characters only.
+      description:
+        title: Description
+        type: string
+        description: Help others understand what this website is for.
+      technology:
+        title: Technology
+        type: string
+        description: The chosen technology
+        default: django
