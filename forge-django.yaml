@@ -12,6 +12,7 @@ metadata:
 spec:
   owner: user:wrousseau
   templater: forge
+  type: service
   path: '.'
   
   schema:
