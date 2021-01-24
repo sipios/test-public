@@ -3,7 +3,7 @@ kind: Template
 metadata:
   name: forge-django-template
   title: Django App (Forge)
-  description: Create a new Django application using Theodo's Forge
+  description: Create a new Django (Python) application using Theodo's Forge
   tags:
     - experimental
     - forge
@@ -12,7 +12,6 @@ metadata:
 spec:
   owner: user:wrousseau
   templater: forge
-  type: website
   path: '.'
   
   schema:
@@ -27,11 +26,11 @@ spec:
         title: Name
         type: string
         pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
-        description: Unique name of the website to create. Lowercase, URL-safe characters only.
+        description: Unique name of the service or website to create. Lowercase, URL-safe characters only.
       description:
         title: Description
         type: string
-        description: Help others understand what this website is for.
+        description: Help others understand what this service or website is for
       back_end_technology:
         title: Back-end Technology
         type: string
@@ -45,7 +44,7 @@ spec:
         description: The chosen front-end technology
         default: "None"
       provide_devops_scripts:
-        title: Provide Terraform script
+        title: Provide Terraform script to provision and deploy to EB environments
         type: boolean
         description: Provide Terraform script to provision and deploy to EB environments
         default: false
