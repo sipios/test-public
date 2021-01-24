@@ -1,0 +1,45 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: forge-react-template
+  title: React.js App (Forge)
+  description: Create a new React.js application using Theodo's Forge
+  tags:
+    - experimental
+    - forge
+    - reactjs
+    - frontend
+spec:
+  owner: user:wrousseau
+  templater: forge
+  type: website
+  path: '.'
+  
+  schema:
+    required: 
+      - component_id
+      - description
+      - back_end_technology
+      - front_end_technology
+    properties:
+      component_id:
+        title: Name
+        type: string
+        pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
+        description: Unique name of the service or website to create. Lowercase, URL-safe characters only.
+      description:
+        title: Description
+        type: string
+        description: Help others understand what this service or website is for
+      front_end_technology:
+        title: Front-end Technology
+        type: string
+        enum: ["React.js", "Next.js (React.js + Server Side Rendering)", "None"]
+        description: The chosen front-end technology
+        default: "React.js"
+      back_end_technology:
+        title: Back-end Technology
+        type: string
+        enum: ["None", "Django (Python)", "Nest.js (Node)", "Serverless", "API Platform / Symfony (PHP)"]
+        description: The chosen back-end technology
+        default: "None"
