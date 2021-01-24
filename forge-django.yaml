@@ -21,8 +21,6 @@ spec:
       - description
       - back_end_technology
       - front_end_technology
-      - mobile_technology
-      - provide_devops_scripts
     properties:
       component_id:
         title: Name
@@ -45,14 +43,3 @@ spec:
         enum: ["None", "React.js", "Next.js (React.js + Server Side Rendering)"]
         description: The chosen front-end technology
         default: "None"
-      mobile_technology:
-        title: Mobile Technology
-        type: string
-        enum: ["None", "React Native"]
-        description: The chosen mobile technology
-        default: "React Native"
-      provide_devops_scripts:
-        title: Provide Terraform script to provision and deploy to EB environments
-        type: boolean
-        description: Provide Terraform script to provision and deploy to EB environments
-        default: false
