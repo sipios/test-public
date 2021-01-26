@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: forge-react-template
+  title: Next.js App (Forge)
+  description: Create a new Next.js application (React.js + Server Side Rendering) using Theodo's Forge
+  tags:
+    - experimental
+    - forge
+    - nextjs
+    - server-side-rendering
+    - reactjs
+    - front-end
+spec:
+  owner: user:wrousseau
+  templater: forge
+  type: website
+  path: '.'
+  
+  schema:
+    required: 
+      - component_id
+      - description
+      - back_end_technology
+      - front_end_technology
+    properties:
+      component_id:
+        title: Name
+        type: string
+        pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
+        description: Unique name of the service or website to create. Lowercase, URL-safe characters only.
+      description:
+        title: Description
+        type: string
+        description: Help others understand what this service or website is for
+      front_end_technology:
+        title: Front-end Technology
+        type: string
+        enum: ["Next.js (React.js + Server Side Rendering)", "React.js", "None"]
+        description: The chosen front-end technology
+        default: "Next.js (React.js + Server Side Rendering)"
+      back_end_technology:
+        title: Back-end Technology
+        type: string
+        enum: ["None", "Django (Python)", "Nest.js (Node)", "Serverless", "API Platform / Symfony (PHP)"]
+        description: The chosen back-end technology
+        default: "None"
