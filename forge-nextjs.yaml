@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Template
 metadata:
-  name: forge-react-template
+  name: forge-nextjs-template
   title: Next.js App (Forge)
   description: Create a new Next.js application (React.js + Server Side Rendering) using Theodo's Forge
   tags:
