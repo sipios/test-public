@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Template
 metadata:
-  name: forge-django-template
+  name: forge-api-platform-template
   title: API Platform App (Forge)
   description: Create a new API Platform / Symfony (PHP) application using Theodo's Forge
   tags:
