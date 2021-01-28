@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: hyperspace-spring-boot-template
+  title: Spring Boot App (Hyperspace)
+  description: Create a new Spring Boot application using Sipios's Hyperspace
+  tags:
+    - experimental
+    - hyperspace
+    - java
+    - spring-boot
+spec:
+  owner: user:wrousseau
+  templater: hyperspace
+  type: service
+  path: '.'
+  
+  schema:
+    required: 
+      - component_id
+      - description
+    properties:
+      component_id:
+        title: Name
+        type: string
+        pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
+        description: Unique name of the service to create. Lowercase, URL-safe characters only.
+      description:
+        title: Description
+        type: string
+        description: Help others understand what this service is for
